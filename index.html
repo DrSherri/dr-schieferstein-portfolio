@@ -925,8 +925,8 @@
             </div>
             <div class="contact-wrapper">
                 <p>I am always open to discussing curriculum development, academic collaboration, or speaking engagements.</p>
-               
-                <form class="contact-form" onsubmit="event.preventDefault(); alert('This is a portfolio demo. Form submission is disabled.');">
+               <form class="contact-form" onsubmit="sendEmail(event)">
+
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" class="form-control" placeholder="Your Name">
@@ -995,4 +995,5 @@
         });
     </script>
 </body>
+
 </html>
