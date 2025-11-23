@@ -993,7 +993,29 @@
                 }
             });
         });
+            function sendEmail(e) {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const fromEmail = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        const subject = encodeURIComponent('Website inquiry from ' + (name || 'Prospective Contact'));
+
+        const body = encodeURIComponent(
+            'Name: ' + name + '\n' +
+            'Email: ' + fromEmail + '\n\n' +
+            message
+        );
+
+        // 👇 Replace this email with Sherri's actual email address:
+        const sherriEmail = 'signingsongssherri@gmail.com';
+
+        window.location.href = `mailto:${sherriEmail}?subject=${subject}&body=${body}`;
+    }
+
     </script>
 </body>
 
 </html>
+
